@@ -130,7 +130,7 @@ class RubyPants < String
             if t == "'"
               # Special case: single-character ' token
               if prev_token_last_char =~ /\S/
-                t = entity(:single_right_quote)
+                t = entity(:apostrophe)
               else
                 t = entity(:single_left_quote)
               end
@@ -364,7 +364,8 @@ class RubyPants < String
       :em_dash            => "&#8212;",
       :en_dash            => "&#8211;",
       :ellipsis           => "&#8230;",
-      :html_quote         => "&quot;"
+      :html_quote         => "&quot;",
+      :apostrope          => "&apos;"
     }
   end
 
